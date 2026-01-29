@@ -28,7 +28,7 @@ s32 func_8023A318();                          /* extern */
 s32 func_8023A3E0();                          /* extern */
 s32 func_8025E16C();                          /* extern */
 s32 func_8025E1D4(void **);                   /* extern */
-s32 func_8025E6A4(u32);                       /* extern */
+s32 g_initRandom(u32);                       /* extern */
 s32 func_80265C04();                          /* extern */
 s32 func_8026C208();                          /* extern */
 s32 func_8026C77C();                          /* extern */
@@ -91,7 +91,7 @@ void func_80225840(s32 arg0)
     func_8025E16C();
     sp3C = func_8022773C();
     func_8026C77C();
-    func_8025E6A4(func_80297E38());
+    g_initRandom(func_80297E38());
     temp_s0 = func_802998EC(0x1000);
     func_80237890();
     HuPrcCreate(&func_80236F54, 0, temp_s0, 0x1000, 0x401);
