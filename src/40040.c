@@ -56,7 +56,7 @@ extern s32 func_80236F54;
 void func_80225840(s32 arg0)
 {
     s32 temp_s0; 
-    Gfx *sp40;  
+    Gfx *mainGfx;
     s32 sp3C;  
     s32 var_s1; 
     s32 temp_v0;
@@ -100,52 +100,33 @@ void func_80225840(s32 arg0)
     func_8023A3E0();
     func_80265C04();
 
-    while (TRUE)
-    {
-
+    while (TRUE) {
         func_8023A104();
-
-        sp40 = func_80227464();
-
+        mainGfx = func_80227464();
         func_80238100();
-
         func_802381F8();
-
         HuPrcCall();
-
-        func_8022787C(&sp40);
-
+        func_8022787C(&mainGfx);
         func_802290CC();
 
         temp_v0 = func_80227678(sp3C);
-        gSPDisplayList(sp40++, temp_v0);
+        gSPDisplayList(mainGfx++, temp_v0);
 
-        func_8025E1D4(&sp40);
-
+        func_8025E1D4(&mainGfx);
         func_8026C208();
-
         func_8023A208();
+        func_80226E84(mainGfx);
 
-        func_80226E84(sp40);
-
-        if (var_s1 == 0)
-        {
-
+        if (var_s1 == 0) {
             continue;
         }
 
-        var_s1 -= 1;
-
-        if (var_s1 != 0)
-        {
-
+        if (--var_s1 != 0) {
             continue;
         }
 
-        func_80227D50(D_802AC5C0, 8, 6, 0x130, 0xE4);
-
-        func_80227708(8, 6, 0x130, 0xE4);
-
+        func_80227D50(D_802AC5C0, 8, 6, 304, 228);
+        func_80227708(8, 6, 304, 228);
         func_80297FA0(0);
     }
 }
